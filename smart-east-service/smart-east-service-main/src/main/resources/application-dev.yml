@@ -1,0 +1,30 @@
+server:
+  port: 8085
+
+
+spring:
+  datasource:
+    primary:
+      url: jdbc:mysql://localhost:3306/mydatabase?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: yourpassword
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      druid:
+        initial-size: 5 #连接池初始化大小
+        min-idle: 10 #最小空闲连接数
+        max-active: 20 #最大连接数
+        web-stat-filter:
+          exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*" #不统计这些请求数据
+        stat-view-servlet: #访问监控网页的登录用户名和密码
+          login-username: druid
+          login-password: druid
+    secondary:
+      url: jdbc:mysql://localhost:3306/mydatabase2?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: yourpassword
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+logging:
+  level:
+    root: info
+    com.i36ice: debug

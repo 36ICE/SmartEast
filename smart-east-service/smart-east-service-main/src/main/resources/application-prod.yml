@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/myapp_prod?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: produser
+    password: prodpass
+
+mybatis:
+  config-location: classpath:mybatis-config-prod.xml
