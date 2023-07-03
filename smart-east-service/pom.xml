@@ -17,6 +17,7 @@
         <module>smart-east-service-user</module>
         <module>smart-east-service-main</module>
         <module>smart-east-service-api</module>
+        <module>smart-east-example</module>
     </modules>
 
     <properties>
@@ -25,6 +26,8 @@
         <maven.compiler.target>17</maven.compiler.target>
         <spring.boot.version>3.0.0</spring.boot.version>
         <mybatis.version>3.0.0</mybatis.version>
+        <mybatisplus.version>3.5.1</mybatisplus.version>
+        <tkmybatis.version>1.1.2</tkmybatis.version>
         <lombok.version>1.18.20</lombok.version>
         <mysql.version>8.0.31</mysql.version>
     </properties>
@@ -58,6 +61,16 @@
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${tkmybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
